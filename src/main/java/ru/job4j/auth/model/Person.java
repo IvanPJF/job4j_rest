@@ -18,6 +18,9 @@ public class Person {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "employee_id")
+    private Integer employeeId;
+
     public static Person of(Integer id) {
         Person person = new Person();
         person.setId(id);
@@ -81,5 +84,13 @@ public class Person {
                 + ", login='" + login + '\''
                 + ", password='" + password + '\''
                 + '}';
+    }
+
+    public Integer getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
     }
 }
